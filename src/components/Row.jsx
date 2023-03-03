@@ -2,6 +2,9 @@ import React from 'react';
 import '../App.css';
 import Card from './card';
 import carddatas from '../carddatas';
+import Component from './compon';
+
+
 
 
 function Row() {
@@ -28,6 +31,8 @@ function Row() {
         
     }
 
+  
+
   const  addingcards = cards.map(card => {
     return(
      <Card
@@ -41,10 +46,15 @@ function Row() {
      />)    
   })
 
+  
+
   return (
+    <>
     <div className="leftHeaderItems">
         {addingcards}
     </div>
+    
+    </>
   )
 
 };  

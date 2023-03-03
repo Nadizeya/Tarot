@@ -5,21 +5,32 @@
   font-family: sans-serif;
 }
 
-.leftHeaderItems{
-  margin-top: 50px;
-  margin-left: 270px;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/004/968/002/original/cute-abstract-modern-background-free-vector.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.leftHeaderItems {
+  margin-top: 5vw;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(27, 22px);
+  grid-gap: 0.7vw;
+  grid-template-columns: repeat(27, 2vw);
   transition: grid-template-columns 0.5s;
 }
 
-
-.card{
-  width: 15vh;
-  background-color: white ;
-  height: 27vh;
-  margin: 50px 100px;
+.card {
+  width: 10vw;
+  height: 17.5vh;
+  margin: 2.5vw 5vw;
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   background-size: 100% 110%;
@@ -31,11 +42,12 @@
   transition: 0.4s;
 }
 
-.cardholder{
+.cardholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .card-placer{
@@ -45,4 +57,52 @@
     align-self: center;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  };
+  }
+  
+.no-zoom {
+  touch-action: manipulation;
+}
+
+@media screen and (max-width: 767px) { /* for phones */
+  .leftHeaderItems {
+    grid-template-columns: repeat(8, 10vw);
+  }
+  
+  .card {
+    width: 80vw;
+    height: 35vh;
+    margin: 5vw;
+  }
+  
+  .cardholder {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) { /* for tablets */
+  .leftHeaderItems {
+    grid-template-columns: repeat(16, 4vw);
+  }
+  
+  .card {
+    width: 25vw;
+    height: 40vh;
+    margin: 2.5vw;
+  }
+  
+  .cardholder {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) { /* for desktops */
+  .leftHeaderItems {
+    grid-template-columns: repeat(27, 2vw);
+  }
+  
+  .card {
+    width: 10vw;
+    height: 17.5vh;
+    margin: 2.5vw 5vw;
+  }
+}
