@@ -35,6 +35,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   background-size: 100% 110%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .card:hover{
@@ -63,13 +64,14 @@
   touch-action: manipulation;
 }
 
+
 @media screen and (max-width: 767px) { /* for phones */
   .leftHeaderItems {
     grid-template-columns: repeat(8, 10vw);
   }
   
   .card {
-    width: 80vw;
+    width: 40vw;
     height: 35vh;
     margin: 5vw;
   }
@@ -85,7 +87,7 @@
   }
   
   .card {
-    width: 25vw;
+    width: 15vw;
     height: 40vh;
     margin: 2.5vw;
   }
@@ -101,7 +103,7 @@
   }
   
   .card {
-    width: 10vw;
+    width: 7vw;
     height: 17.5vh;
     margin: 2.5vw 5vw;
   }

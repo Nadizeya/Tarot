@@ -15,7 +15,7 @@ const Background = ({ backgroundImageUrl, children }) => {
         background.style.width = `${window.innerWidth}px`;
         background.style.height = `${window.innerHeight}px`;
       }
-    };
+    };  
 
     handleResize();
 
@@ -33,7 +33,7 @@ const Background = ({ backgroundImageUrl, children }) => {
         position: "fixed",
         top: 0,
         left: 0,
-        zIndex: -1,
+        zIndex: 1,
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center center",

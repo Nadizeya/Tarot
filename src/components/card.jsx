@@ -1,18 +1,23 @@
-import React from "react";
-import '../App.css'
+import React, { useState } from "react";
+import "../App.css";
+import SelectedCard from "./selectedcard";
 
 function Card(props) {
-  const styles = {
-    // backgroundImage: props.on ? "url(https://www.shutterstock.com/image-vector/tarot-cards-back-design-abstract-260nw-267982064.jpg)" : "url(props.image)"
-    backgroundColor: props.on? "grey" : "blue"
-    
-  }
-   
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleClick = () => {
+    setIsSelected(!isSelected);
+  };
+
+  const cardStyle = {
+    backgroundColor: isSelected ? "grey" : "blue",
+  };
+
   return (
-    <div style={styles} className="card" onClick={()=>props.clickhandler(props.id)} >
-        
-    </div>  
+    <div style={cardStyle} className="card" onClick={handleClick}>
+      {isSelected && <Card {...props} className= "selected-card" />}
+    </div>
   );
 }
 
-export default Card; 
+export default Card;
